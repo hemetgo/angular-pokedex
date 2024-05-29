@@ -1,0 +1,55 @@
+<div class="pokemon-details-container" [ngStyle]="{'background': getBackground()}">
+
+  <div class="pokemon-header">
+      <mat-icon fontIcon="close" mat-dialog-close></mat-icon>
+  </div>
+
+  <div class="pokemon-image">
+    <div>
+      <img src="{{pokemon.sprites.front_default}}" alt="{{data.pokemon.name}}">
+    </div>
+    <div>
+      <img src="{{pokemon.sprites.front_shiny}}" alt="{{data.pokemon.name}}">
+    </div>
+  </div>
+
+  <div class="navigation">
+    <div class="previous">
+      <mat-icon fontIcon="chevron_left" (click)="previous()" *ngIf="havePrevious()"></mat-icon>
+    </div>
+  
+    <div class="next">
+      <mat-icon fontIcon="chevron_right" (click)="next()" *ngIf="haveNext()"></mat-icon>
+    </div>
+  </div>
+
+  <div class="pokemon-info">
+    <h2>{{pokemon.id}}#  {{ pokemon.name | titlecase }}</h2>
+    <div class="types-container">
+      <h3>Types: </h3>
+      <div class="pokemon-types">
+        <span *ngFor="let type of pokemon.types" 
+              [ngStyle]="{'background-color': typeColors[type.type.name]}">
+          {{type.type.name | titlecase}}
+        </span>
+      </div>
+    </div>
+
+    <div class="description-container">
+      <div class="values"> 
+        <div class="height">
+          <h3>Height: </h3> {{pokemon.height / 10}}m
+        </div>
+        <div class="width">
+          <h3>Weight: </h3>{{pokemon.weight / 10}}Kg
+        </div>
+      </div>
+      <h3>Description: </h3>
+      {{ specie?.flavor_text_entries?.at(0)?.flavor_text }}
+    </div>
+  </div>
+</div>
+  
+
+
+

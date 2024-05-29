@@ -1,0 +1,29 @@
+.content{
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.list {
+    width: 80%; 
+    margin: 0 auto; 
+    padding: 10px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(228px, 228px)); 
+    grid-gap: 14px; 
+}
+
+.pokemon{
+    width: 100vb;
+}
+
+input[type="text"] {
+    width: 80%; 
+    max-width: 1200px; 
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }

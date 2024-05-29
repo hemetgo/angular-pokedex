@@ -1,0 +1,10 @@
+.content{
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+.content h1{
+    margin-bottom: 50px;
+    font-size: 64px;
+}
